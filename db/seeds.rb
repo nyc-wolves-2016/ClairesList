@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-20.times do
-  user = User.create!( username: Faker::Superhero.name, email: Faker::Internet.email, password: "password", phone: [Faker::PhoneNumber.phone_number, nil].sample)
+10.times do
+  user = User.create!( username: Faker::Internet.user_name, email: Faker::Internet.email, password: "password", phone: [Faker::PhoneNumber.phone_number, nil].sample)
 end
 
 10.times do
@@ -15,5 +15,5 @@ end
 end
 
 40.times do
-  article = Article.create!( title: Faker::Commerce.product_name, description: Faker::Lorem.paragraph(3), price: Faker::Commerce.price, user_id: rand(1..20), category_id: rand(1..10))
+  article = Article.create!( title: Faker::Commerce.product_name, description: Faker::Lorem.paragraph(3), price: Faker::Commerce.price, user_id: rand(1..10), category_id: rand(1..10))
 end
