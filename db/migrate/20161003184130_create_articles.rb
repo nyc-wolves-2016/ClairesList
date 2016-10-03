@@ -4,8 +4,9 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.string :title, null: false
       t.text :description, null: false
       t.decimal :price, null: false
-      t.string :key, null: false
-      t.references :user, foreign_key: true
+      t.string :key
+      t.references :user
+      t.references :category
 
       t.timestamps
     end

@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  belongs_to :article
+  validates :name, presence: true
 end
