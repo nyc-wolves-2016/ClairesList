@@ -1,2 +1,14 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= @user.username %></h1>
+<p>User since: <%= @user.created_at%></p>
+
+<h2>Posts Created:</h2>
+<% if @user.articles %>
+<ul>
+  <% @user.articles.each do |article| %>
+    <li><strong><%= article.title %></strong><br>
+      <%= article.created_at %><br>
+      <%= article.description %>
+    </li>
+  <% end %>
+</ul>
+<% end %>

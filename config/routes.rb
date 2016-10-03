@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/show'
-
-  get 'users/create'
-
-  get 'articles/show'
+  resources :users
 
   resources :categories do
     resources :articles
