@@ -1,0 +1,7 @@
+<% if @category %>
+  <ul>
+    <% @category.articles.each do |article| %>
+    <li><a href="/categories/<%= @category.id %>/articles/<%= article.id %>"><%= article.title %></a></li>
+    <% end %>
+  </ul>
+<% end %>
