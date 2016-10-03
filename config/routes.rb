@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'articles/show'
+  resources :users
+
+  get 'users/login'
+  get 'users/register' => 'users#new'
 
   resources :categories do
     resources :articles
